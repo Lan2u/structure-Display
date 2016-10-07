@@ -1,6 +1,8 @@
 // All input preformatted to the form AXnEy with n being >= 1 and y being >=0
+
+// Convert from AXnEy form into a structure with a name, angles and electon pairs etc.
 public class Convert {
-	public Structure convert(String input) {
+	public static Structure convert(String input) {
 		int X = Integer.parseInt(String.valueOf(input.charAt(2)));
 		int E = Integer.parseInt(String.valueOf(input.charAt(4)));
 		int stericNo = X + E;
@@ -43,7 +45,7 @@ public class Convert {
 					default:
 						throw new IllegalArgumentException("Ligands > steric number (5)");
 				}
-			case 6: // Hectagonal Based
+			case 6: // Hexagonal Based
 				switch (X) {
 					case (1):
 					case (2):

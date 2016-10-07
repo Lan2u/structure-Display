@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 /**
  * Created by Paul Lancaster on 26/09/16
  */
@@ -15,7 +16,6 @@ import java.awt.event.ActionListener;
 
 public class structureDisplay extends JFrame implements ActionListener{
     JTextField inField;
-    JLabel outLabel;
     Button translateButton;
 
     public static void main(String[] args){
@@ -25,17 +25,24 @@ public class structureDisplay extends JFrame implements ActionListener{
     structureDisplay(){
         setSize(200,100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        inField = new JTextField("AX2E2");
+        setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
+
+        inField = new JTextField("AXnEy"); // Placeholder text
+        add(inField);
+
         translateButton = new Button("Translate");
-        outLabel = new JLabel("Sucks fam");
         translateButton.addActionListener(this);
+        add(translateButton);
+
+        OutputPanel outputPanel = new OutputPanel();
+        add(outputPanel);
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         // Button to translate from AXE to structure pressed
         try {
-            Structure generateStructure = convert(inField.getText());
+            Structure generateStructure = Convert.convert(inField.getText());
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -48,12 +55,5 @@ public class structureDisplay extends JFrame implements ActionListener{
             throw new IllegalArgumentException("Invalid input, Input < 3");
         }
         return true;
-    }
-
-    // converts from AXE to structure
-    private Structure convert(String text) {
-        if (checkInput(text)) { // Check input valid and return converted structure if it is
-            return null;
-        }
     }
 }
