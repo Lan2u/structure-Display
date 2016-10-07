@@ -13,9 +13,9 @@ public enum Structure {
 
     ;
 
-    public double[] bondAngles;
-    public int X;
-    public int E;
+    public double[] bondAngles; // contains 2 entries at index 0 and 1 for the 2 different angles
+    public int X; // number of bonded electron pairs from ligands (a ligand can provide 2 electron pairs)
+    public int E; // number of lone pairs
 
 
     Structure(double angleOne, double angleTwo, int X, int E){
