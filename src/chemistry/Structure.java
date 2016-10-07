@@ -1,3 +1,5 @@
+package chemistry;
+
 /**
  * Created by Paul Lancaster on 06/10/16
  */

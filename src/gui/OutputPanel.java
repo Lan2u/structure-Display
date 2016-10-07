@@ -1,3 +1,5 @@
+package gui;
+
 import javax.swing.*;
 
 /**
@@ -29,11 +31,11 @@ public class OutputPanel extends JPanel {
 
     public void setLonePairs(int lonePairs) {
         this.lonePairs = lonePairs;
-        pairLabel.setText(bondedPairs + " bonded pairs and " + lonePairs + " lone pairs");
+        pairLabel.setText(bondedPairs + " bonded pairs and " + this.lonePairs + " lone pairs");
     }
 
     public void setBondedPairs(int bondedPairs) {
         this.bondedPairs = bondedPairs;
-        pairLabel.setText(bondedPairs + " bonded pairs and " + lonePairs + " lone pairs");
+        pairLabel.setText(this.bondedPairs + " bonded pairs and " + lonePairs + " lone pairs");
     }
 }

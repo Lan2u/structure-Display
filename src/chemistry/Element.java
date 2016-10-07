@@ -1,3 +1,5 @@
+package chemistry;
+
 import java.awt.*;
 
 public class Element{
@@ -6,10 +8,6 @@ public class Element{
     private final String ATOMIC_NAME;
     private Color colour;
     private Integer outerElectrons;
-
-
-
-
 
     Element(int atomicNumber, String symbol, String name, String colourCode, String configuration){
         ATOMIC_NUMBER = atomicNumber;

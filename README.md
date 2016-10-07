@@ -1,4 +1,4 @@
-# Structure-Display
+# chemistry.Structure-Display
 A program for displaying the structure of a compounds given it's AXnEn
 
 

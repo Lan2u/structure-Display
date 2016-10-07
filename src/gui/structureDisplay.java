@@ -1,3 +1,8 @@
+package gui;
+
+import chemistry.Convert;
+import chemistry.Structure;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,8 +20,7 @@ import java.awt.event.ActionListener;
 
 
 public class structureDisplay extends JFrame implements ActionListener{
-    JTextField inField;
-    Button translateButton;
+    private JTextField inField;
 
     public static void main(String[] args){
        new structureDisplay();
@@ -30,7 +34,7 @@ public class structureDisplay extends JFrame implements ActionListener{
         inField = new JTextField("AXnEy"); // Placeholder text
         add(inField);
 
-        translateButton = new Button("Translate");
+        Button translateButton = new Button("Translate");
         translateButton.addActionListener(this);
         add(translateButton);
 
