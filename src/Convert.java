@@ -9,25 +9,21 @@ public class Convert {
 				switch (X) {
 					case (1):
 					case (2):
-						return Stucture.LINEAR;
+						return Structure.LINEAR;
 					default:
 						throw new IllegalArgumentException("Ligands > steric number 2)");
-						break;
 				}
-				break;
 			case 3: // Trigonal based
 				switch (X) {
 					case (1):
-						return Stucture.LINEAR;
+						return Structure.LINEAR;
 					case (2):
 						return Structure.BENT_ONE;
 					case (3):
-						return Structure.TRIGONAL_PLANAR
+						return Structure.TRIGONAL_PLANAR;
 					default:
 						throw new IllegalArgumentException("Ligands > steric number (3)");
-						break;
 				}
-				break;
 			case 4: // Tetrahedral based
 				switch (X) {
 					case (1):
@@ -36,9 +32,7 @@ public class Convert {
 					case (4):
 					default:
 						throw new IllegalArgumentException("Ligands > steric number (4)");
-						break;
 				}
-				break;
 			case 5:
 				switch (X) {
 					case (1):
@@ -48,9 +42,7 @@ public class Convert {
 					case (5):
 					default:
 						throw new IllegalArgumentException("Ligands > steric number (5)");
-						break;
 				}
-				break;
 			case 6: // Hectagonal Based
 				switch (X) {
 					case (1):
@@ -61,9 +53,7 @@ public class Convert {
 					case (6):
 					default:
 						throw new IllegalArgumentException("Ligands > steric number (6)");
-						break;
 				}
-				break;
 			case 7:
 				switch (X) {
 					case (1):
@@ -75,9 +65,7 @@ public class Convert {
 					case (7):
 					default:
 						throw new IllegalArgumentException("Ligands > steric number (7)");
-						break;
 				}
-				break;
 			case 8:
 				switch (X) {
 					case (1):
@@ -90,9 +78,9 @@ public class Convert {
 					case (8):
 					default:
 						throw new IllegalArgumentException("Ligands > steric number (8)");
-						break;
 				}
-				break;
+			default:
+				throw  new IllegalArgumentException("Steric number > 8 -- UNSUPPORTED");
 		}
 	}
 }

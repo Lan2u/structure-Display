@@ -5,8 +5,8 @@ public enum Structure {
     // Data on VSPER structures
     // Angle one, angle 2, ligand count, lone pair count
     LINEAR(180,0,2,0),
-    BENT_ONE(120,),
-    BENT_TWO(),
+    BENT_ONE(120,0,2,1),
+    BENT_TWO(109,0,2,2),
     TRIGONAL_PLANAR(120,0,3,0),
     TETRAHEDRAL(109,0,4,0),
     OCTAHEDRAL(90,0,6,0),
