@@ -21,6 +21,7 @@ import java.awt.event.ActionListener;
 
 public class structureDisplay extends JFrame implements ActionListener{
     private JTextField inField;
+    private OutputPanel outputPanel;
 
     public static void main(String[] args){
        new structureDisplay();
@@ -38,17 +39,19 @@ public class structureDisplay extends JFrame implements ActionListener{
         translateButton.addActionListener(this);
         add(translateButton);
 
-        OutputPanel outputPanel = new OutputPanel();
+        outputPanel = new OutputPanel();
         add(outputPanel);
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         // Button to translate from AXE to structure pressed
-        try {
-            Structure generateStructure = Convert.convert(inField.getText());
-        } catch (Exception e){
-            e.printStackTrace();
+        if (checkInput(inField.getText())) { // Runs if the input is ok
+            Structure generatedStructure = Convert.convert(inField.getText()); // Convert the input into a structure
+            outputPanel.display(generatedStructure); // Display the structure
+        }else{
+            // Input form incorrect
+            System.out.println("Bad Input");
         }
     }
 

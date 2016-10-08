@@ -1,5 +1,7 @@
 package gui;
 
+import chemistry.Structure;
+
 import javax.swing.*;
 
 /**
@@ -25,17 +27,22 @@ public class OutputPanel extends JPanel {
         this.add(pairLabel);
     }
 
-    public void setName(String name){
+    @Override
+    private void setName(String name){
         nameLabel.setText("Name: " + name);
     }
 
-    public void setLonePairs(int lonePairs) {
+    private void setLonePairs(int lonePairs) {
         this.lonePairs = lonePairs;
         pairLabel.setText(bondedPairs + " bonded pairs and " + this.lonePairs + " lone pairs");
     }
 
-    public void setBondedPairs(int bondedPairs) {
+    private void setBondedPairs(int bondedPairs) {
         this.bondedPairs = bondedPairs;
         pairLabel.setText(this.bondedPairs + " bonded pairs and " + lonePairs + " lone pairs");
+    }
+
+    public void display(Structure generatedStructure) {
+        generatedStructure.toString();
     }
 }

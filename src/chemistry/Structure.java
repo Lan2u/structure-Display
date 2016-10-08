@@ -28,10 +28,10 @@ public enum Structure {
     public int X; // number of bonded electron pairs from ligands (a ligand can provide 2 electron pairs)
     public int E; // number of lone pairs
 
-
     Structure(double angleOne, double angleTwo, int X, int E){
         this.bondAngles = new double[]{angleOne,angleTwo};
         this.X = X;
         this.E = E;
     }
+
 }
